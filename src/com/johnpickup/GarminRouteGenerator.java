@@ -15,6 +15,9 @@ public class GarminRouteGenerator {
     private CourseConverter courseConverter = new CourseConverter();
 
     public static void main(String[] args) {
+
+        // TODO: run as a GUI if there are no command line arguments
+
         try {
             GarminRouteGenerator garminRouteGenerator = new GarminRouteGenerator();
             for (String arg : args) {

@@ -63,11 +63,10 @@ public class CourseTest {
         assertFitEqual(expected, actual);
 
         FitSaver.save(convertedCourse, outputFilename);
-        // TODO compare with expected FIT file from disk
     }
 
     private void assertFitEqual(List<Mesg> expected, List<Mesg> actual) {
-        //assertEquals(expected.size(), actual.size());
+        assertEquals(expected.size(), actual.size());
         for (int i=0; i < expected.size(); i++) {
             log.info("Mesg #{}", i);
             Mesg expectedMesg = expected.get(i);
