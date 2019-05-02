@@ -1,2 +1,2 @@
 # GarminRouteCreator
-Convert Garmin FIT files from GPX files
+Convert GPX files into Garmin FIT files
