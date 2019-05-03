@@ -9,10 +9,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
 public class GpxReader {
-    public GpxType readGpxFile(String filenme) throws JAXBException, FileNotFoundException {
+    public GpxType readGpxFile(File file) throws JAXBException, FileNotFoundException {
         JAXBContext jc = JAXBContext.newInstance("com.johnpickup.gpx");
         Unmarshaller um = jc.createUnmarshaller();
-        GpxType gpxType = (GpxType)JAXBIntrospector.getValue(um.unmarshal(new FileInputStream(new File(filenme))));
+        GpxType gpxType = (GpxType)JAXBIntrospector.getValue(um.unmarshal(new FileInputStream(file)));
         return gpxType;
     }
 }

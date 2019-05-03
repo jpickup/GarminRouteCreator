@@ -54,7 +54,7 @@ public class CourseTest {
 
     @Test
     public void generate() throws Exception {
-        GpxType gpxType = gpxReader.readGpxFile(inputFilename);
+        GpxType gpxType = gpxReader.readGpxFile(new File(inputFilename));
 
         Course convertedCourse = courseConverter.convert(gpxType);
         List<Mesg> actual = convertedCourse.generate();
